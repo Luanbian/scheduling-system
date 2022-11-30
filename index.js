@@ -10,13 +10,7 @@ app.use(bodyParser.json())
 
 app.set('view engine', 'ejs')
 
-app.get("/", (req, res) => {
-    res.send('oi')
-})
-
-app.get('/cadastro', (req, res) => {
-    res.render("create")
-})
+app.use(require('./src/routes'))
 
 mongoose.connect('mongodb://127.0.0.1:27017/sisage')
 
