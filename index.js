@@ -14,6 +14,10 @@ app.get("/", (req, res) => {
     res.send('oi')
 })
 
+app.get('/cadastro', (req, res) => {
+    res.render("create")
+})
+
 mongoose.connect('mongodb://127.0.0.1:27017/sisage')
 
 app.listen(8080, () => {console.log('server running..')})
