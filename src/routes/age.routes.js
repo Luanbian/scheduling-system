@@ -5,7 +5,7 @@ router.get("/", (req, res) => {
     res.send('oi')
 })
 
-router.get('/cadastro', (req, res) => {
+router.get('/cadastre', (req, res) => {
     res.render("create")
 })
 
